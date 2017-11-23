@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by tchauvin on 17/06/2017.
+ * Created by tchauvin on 23/11/2017.
  */
 public class Compte {
 

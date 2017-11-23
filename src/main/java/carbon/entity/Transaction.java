@@ -8,7 +8,7 @@ import java.util.Comparator;
 import java.util.Date;
 
 /**
- * Created by tchauvin on 17/06/2017.
+ * Created by tchauvin on 23/11/2017.
  */
 public class Transaction {
 

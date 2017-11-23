@@ -3,7 +3,7 @@ package carbon.entity;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * Created by tchauvin on 18/06/2017.
+ * Created by tchauvin on 23/11/2017.
  */
 public class DetailTransaction {
 

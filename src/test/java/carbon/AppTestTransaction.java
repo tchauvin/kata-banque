@@ -1,7 +1,5 @@
 package carbon;
 
-import carbon.DateUtil.TestDateGenerator;
-import carbon.entity.Compte;
 import carbon.entity.Transaction;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.joda.time.DateTime;

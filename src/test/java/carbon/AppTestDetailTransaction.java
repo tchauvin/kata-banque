@@ -1,12 +1,7 @@
 package carbon;
 
-import carbon.DateUtil.TestDateGenerator;
-import carbon.entity.Compte;
 import carbon.entity.DetailTransaction;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
-
-import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
 
