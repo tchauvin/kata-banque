@@ -31,7 +31,7 @@ public class AppTestTransaction {
         String numeroTransaction = RandomStringUtils.random(10, true, true);
         Transaction transaction = new Transaction(numeroTransaction, 200.0, 1000, dateTime.toDate());
 
-        assertEquals(transaction.toString(), "|          "+numeroTransaction+"| 23/11/2017 19:37:50|     200.0|    1000.0|");
+        assertEquals(transaction.toString(), "|          "+numeroTransaction+"| 23/11/2017 19:37:50|     DEPOT|     200.0|    1000.0|");
     }
 
 

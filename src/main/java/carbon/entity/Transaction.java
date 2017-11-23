@@ -1,6 +1,5 @@
 package carbon.entity;
 
-import carbon.DateUtil.DateGenerator;
 import org.apache.commons.lang3.StringUtils;
 
 import java.text.SimpleDateFormat;
@@ -14,13 +13,20 @@ public class Transaction {
 
     private final String id;
     private Date dateTransaction;
+    private TypeOperation typeOperation;
     private DetailTransaction detailTransaction;
+
+    public enum TypeOperation {
+        DEPOT, RETRAIT;
+    }
 
     public Transaction(String idCreated, double montantTransaction, double solde, Date date) {
         id = idCreated;
         dateTransaction = date;
         detailTransaction = new DetailTransaction(montantTransaction, solde);
-    }
+        typeOperation = TypeOperation.DEPOT;
+        if(montantTransaction < 0) typeOperation = TypeOperation.RETRAIT;
+    };
 
     public static Comparator<Transaction> comparator = new Comparator<Transaction>() {
         public int compare(Transaction p1, Transaction p2) {
@@ -33,7 +39,7 @@ public class Transaction {
         String mouvementStr = detailTransaction.toString();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         String dateTransactionStr = StringUtils.leftPad(dateFormat.format(dateTransaction), 20);
-        return "|" + idStr + "|" + dateTransactionStr + "|" + mouvementStr;
+        return "|" + idStr + "|" + dateTransactionStr + "|" + StringUtils.leftPad(typeOperation.name(), 10) + "|" + mouvementStr;
     }
 
 }
