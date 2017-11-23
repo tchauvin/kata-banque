@@ -12,7 +12,7 @@ public class Imprimante {
     private static void imprimerEnTeteReleveDeCompte() {
         String lineSeprator = StringUtils.leftPad("", 65, "_");
         System.out.println(lineSeprator);
-        System.out.println("|     N° Transaction |   Date Transaction |  montant |  balance |");
+        System.out.println("|     N° Transaction |   Date Transaction | operation|  montant |  balance |");
         System.out.println(lineSeprator);
     }
 
