@@ -7,18 +7,18 @@ import java.util.List;
 /*
  * Created by tchauvin on 23/11/2017.
  */
-public class Imprimante {
+public class Printer {
 
-    private static void imprimerEnTeteReleveDeCompte() {
+    private static void headingPrint() {
         String lineSeprator = StringUtils.leftPad("", 65, "_");
         System.out.println(lineSeprator);
-        System.out.println("|     N° Transaction |   Date Transaction | operation|  montant |  balance |");
+        System.out.println("|     N° Transaction |   Date Transaction | operation|  amount  |  balance |");
         System.out.println(lineSeprator);
     }
 
     public static void print(List<String> listTransaction) {
         String lineSeprator = StringUtils.leftPad("", 65, "_");
-        imprimerEnTeteReleveDeCompte();
+        headingPrint();
         for(String transactionStr : listTransaction) {
             System.out.println(transactionStr);
             System.out.println(lineSeprator);

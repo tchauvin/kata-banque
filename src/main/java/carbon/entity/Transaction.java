@@ -20,12 +20,12 @@ public class Transaction {
         DEPOT, RETRAIT
     }
 
-    public Transaction(String idCreated, double montantTransaction, double solde, Date date) {
+    public Transaction(String idCreated, double amountTransaction, double balance, Date date) {
         id = idCreated;
         dateTransaction = date;
-        detailTransaction = new DetailTransaction(montantTransaction, solde);
+        detailTransaction = new DetailTransaction(amountTransaction, balance);
         typeOperation = TypeOperation.DEPOT;
-        if(montantTransaction < 0) typeOperation = TypeOperation.RETRAIT;
+        if(amountTransaction < 0) typeOperation = TypeOperation.RETRAIT;
     }
 
     public static Comparator<Transaction> comparator = new Comparator<Transaction>() {
@@ -36,7 +36,7 @@ public class Transaction {
 
     public String toString() {
         String idStr = StringUtils.leftPad(id, 20);
-        String mouvementStr = detailTransaction.toString();
+        String detailTransactionStr = detailTransaction.toString();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         String dateTransactionStr = StringUtils.leftPad(dateFormat.format(dateTransaction), 20);
 
@@ -47,7 +47,7 @@ public class Transaction {
         vTransactionStr.append(dateTransactionStr);
         vTransactionStr.append("|");
         vTransactionStr.append(StringUtils.leftPad(typeOperation.name(), 10));
-        vTransactionStr.append(mouvementStr);
+        vTransactionStr.append(detailTransactionStr);
 
         return vTransactionStr.toString();
     }

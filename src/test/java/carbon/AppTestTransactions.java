@@ -19,7 +19,7 @@ public class AppTestTransactions {
     {
         Transactions transactions = new Transactions();
 
-        assertEquals(0, transactions.nombreTransactions());
+        assertEquals(0, transactions.numberOfTransactions());
     }
 
     @Test
@@ -30,9 +30,9 @@ public class AppTestTransactions {
         Transaction transaction = new Transaction(numeroTransaction, 200.0, 1000, dateTime.toDate());
 
         Transactions transactions = new Transactions();
-        transactions.ajouterTransaction(numeroTransaction, transaction);
+        transactions.addTransaction(numeroTransaction, transaction);
 
-        assertEquals(1, transactions.nombreTransactions());
+        assertEquals(1, transactions.numberOfTransactions());
     }
 
     @Test
@@ -43,7 +43,7 @@ public class AppTestTransactions {
         Transaction transaction = new Transaction(numeroTransaction, 200.0, 1000, dateTime.toDate());
 
         Transactions transactions = new Transactions();
-        transactions.ajouterTransaction(numeroTransaction, transaction);
+        transactions.addTransaction(numeroTransaction, transaction);
 
         Transaction transactionRecuperer = transactions.findTransactionById(numeroTransaction);
         assertNotNull(transactionRecuperer);

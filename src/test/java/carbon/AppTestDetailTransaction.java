@@ -20,7 +20,7 @@ public class AppTestDetailTransaction {
     @Test
     public void testDeterminerSolde()
     {
-        double newSolde = DetailTransaction.determinerSolde(200.0, 50.0);
+        double newSolde = DetailTransaction.determinedBalance(200.0, 50.0);
         assertEquals(250.0, newSolde, 0);
     }
 

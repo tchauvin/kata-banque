@@ -7,21 +7,21 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class DetailTransaction {
 
-    private double montant;
-    private double solde;
+    private double amount;
+    private double balance;
 
-    public DetailTransaction(double valeurTransaction, double soldeCompte) {
-        montant = valeurTransaction;
-        solde = soldeCompte;
+    public DetailTransaction(double amountTransaction, double balanceAccount) {
+        amount = amountTransaction;
+        balance = balanceAccount;
     }
 
-    public static double determinerSolde(double soldeCompte, double valeurTransaction) {
-        return soldeCompte + valeurTransaction;
+    public static double determinedBalance(double balanceAccount, double amountTransaction) {
+        return balanceAccount + amountTransaction;
     }
 
     public String toString() {
-        String montantStr = StringUtils.leftPad(Double.toString(montant), 10);
-        String soldeStr = StringUtils.leftPad(Double.toString(solde), 10);
-        return "|" + montantStr + "|" + soldeStr + "|";
+        String amountStr = StringUtils.leftPad(Double.toString(amount), 10);
+        String balanceStr = StringUtils.leftPad(Double.toString(balance), 10);
+        return "|" + amountStr + "|" + balanceStr + "|";
     }
 }

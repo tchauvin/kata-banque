@@ -15,7 +15,7 @@ public class Transactions {
         transactions = new HashMap<String, Transaction>(0);
     }
 
-    public void ajouterTransaction(String id, Transaction transaction) {
+    public void addTransaction(String id, Transaction transaction) {
         transactions.put(id, transaction);
     }
 
@@ -23,7 +23,7 @@ public class Transactions {
         return transactions.get(id);
     }
 
-    public int nombreTransactions() {
+    public int numberOfTransactions() {
         return transactions.size();
     }
 
