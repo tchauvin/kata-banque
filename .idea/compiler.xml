@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="kata-banque" />
+        <module name="kata-bank" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="kata-banque" target="1.5" />
+      <module name="kata-bank" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
