@@ -14,7 +14,7 @@ public class AppTestDetailTransaction {
     public void testCreationCompteWithToString()
     {
         DetailTransaction detail = new DetailTransaction(200.0, 0);
-        assertEquals(detail.toString(), "     200.0|       0.0|");
+        assertEquals(detail.toString(), "|     200.0|       0.0|");
     }
 
     @Test

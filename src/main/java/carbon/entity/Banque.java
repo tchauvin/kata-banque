@@ -4,12 +4,12 @@ import carbon.DateUtil.DateGenerator;
 import carbon.DateUtil.DefaultDateGenerator;
 import org.apache.commons.lang3.RandomStringUtils;
 
-/**
+/*
  * Created by tchauvin on 23/11/2017
  */
 public class Banque {
 
-    final String nom;
+    private final String nom;
     private Comptes comptes;
 
     public Banque(String nom) {

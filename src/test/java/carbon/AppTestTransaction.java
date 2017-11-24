@@ -10,7 +10,7 @@ import java.util.Date;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-/**
+/*
  * Unit test for simple App.
  */
 public class AppTestTransaction {

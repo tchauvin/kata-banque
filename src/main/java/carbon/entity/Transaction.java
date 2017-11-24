@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Comparator;
 import java.util.Date;
 
-/**
+/*
  * Created by tchauvin on 23/11/2017.
  */
 public class Transaction {
@@ -17,7 +17,7 @@ public class Transaction {
     private DetailTransaction detailTransaction;
 
     public enum TypeOperation {
-        DEPOT, RETRAIT;
+        DEPOT, RETRAIT
     }
 
     public Transaction(String idCreated, double montantTransaction, double solde, Date date) {
@@ -26,7 +26,7 @@ public class Transaction {
         detailTransaction = new DetailTransaction(montantTransaction, solde);
         typeOperation = TypeOperation.DEPOT;
         if(montantTransaction < 0) typeOperation = TypeOperation.RETRAIT;
-    };
+    }
 
     public static Comparator<Transaction> comparator = new Comparator<Transaction>() {
         public int compare(Transaction p1, Transaction p2) {
@@ -39,7 +39,17 @@ public class Transaction {
         String mouvementStr = detailTransaction.toString();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         String dateTransactionStr = StringUtils.leftPad(dateFormat.format(dateTransaction), 20);
-        return "|" + idStr + "|" + dateTransactionStr + "|" + StringUtils.leftPad(typeOperation.name(), 10) + "|" + mouvementStr;
+
+        StringBuilder vTransactionStr = new StringBuilder();
+        vTransactionStr.append("|");
+        vTransactionStr.append(idStr);
+        vTransactionStr.append("|");
+        vTransactionStr.append(dateTransactionStr);
+        vTransactionStr.append("|");
+        vTransactionStr.append(StringUtils.leftPad(typeOperation.name(), 10));
+        vTransactionStr.append(mouvementStr);
+
+        return vTransactionStr.toString();
     }
 
 }

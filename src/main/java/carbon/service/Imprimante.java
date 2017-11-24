@@ -4,7 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 
-/**
+/*
  * Created by tchauvin on 23/11/2017.
  */
 public class Imprimante {

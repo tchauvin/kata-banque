@@ -1,6 +1,6 @@
 package carbon;
 
-/**
+/*
  * Hello world!
  *
  */

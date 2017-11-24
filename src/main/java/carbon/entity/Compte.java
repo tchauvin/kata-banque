@@ -6,7 +6,7 @@ import carbon.DateUtil.DefaultDateGenerator;
 import java.util.Date;
 import java.util.List;
 
-/**
+/*
  * Created by tchauvin on 23/11/2017.
  */
 public class Compte {
@@ -33,10 +33,9 @@ public class Compte {
 
     public void effectuerTransaction (double somme, String id) {
         DefaultDateGenerator dateGenerator = new DefaultDateGenerator();
-        String numeroTransaction = id;
         solde = DetailTransaction.determinerSolde(solde, somme);
-        Transaction retrait = new Transaction(numeroTransaction, -somme, solde, dateGenerator.getDate());
-        transactions.ajouterTransaction(numeroTransaction, retrait);
+        Transaction retrait = new Transaction(id, -somme, solde, dateGenerator.getDate());
+        transactions.ajouterTransaction(id, retrait);
     }
 
     public List<String> listReleverDeCompteToString() {
